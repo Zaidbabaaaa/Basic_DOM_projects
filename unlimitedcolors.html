@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="unlimitedcolors.css">
+</head>
+<body>
+    <h1>Press START-button to start the program & STOP-button to stop the program</h1>
+    
+
+    <div id="btn">
+        <button id="start">START</button>
+        <button id="stop">STOP</button>
+    </div>
+
+
+<script>
+    const randomcolor=function(){
+    const hex="0123456789ABCDEF";
+    let color="#";
+    for(let i=0;i<6;i++){
+        color=color+hex[Math.floor(Math.random()*16)];
+
+    }
+    return color;
+}
+let interval;
+
+const startchanging=function(){
+   interval= setInterval(changebgcolor,1000);
+    function changebgcolor(){
+       let body=document.querySelector('body')
+       body.style.backgroundColor=randomcolor();
+    }
+};
+
+document.querySelector("#start").addEventListener("click",startchanging);
+const stopchangingcolor=function(){
+    clearInterval(interval);
+}
+document.querySelector("#stop").addEventListener("click",stopchangingcolor)
+</script>
+
+
+  </body>
+
+
+
+
+</html>
+
