@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player design</title>
+    <link rel="stylesheet" href="music.css">
+    <script src="https://kit.fontawesome.com/d7eba3f268.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="music-player">
+            <nav>
+                <div class="circle">
+
+
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                
+                <div class="circle">
+                    <i class="fa-solid fa-bars"></i>
+
+
+                   
+                </div>
+            </nav>
+            <img src="music.png" alt="" class="song-img">
+            <h1>superman instrumental</h1>
+            <p>Eminem</p>
+
+         <audio controls id="song">
+            <source src="music.mp3" type="audio/mpeg">
+         </audio>
+         <input type="range" value="0" id="progress">
+
+         <div class="controls">
+            <div> <i class="fa-solid fa-backward"></i></div>
+            <div> <i class="fa-solid fa-play" id="controlIcon"></i></div> 
+            <div><i class="fa-solid fa-forward"></i></div>
+            
+               
+               
+                   
+                    
+
+            
+         </div>
+        </div>
+    </div>
+    <script src="music.js"></script>
+
+    
+</body>
+</html>
